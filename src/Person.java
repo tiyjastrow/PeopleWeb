@@ -9,15 +9,15 @@ import java.util.Scanner;
  * Created by ericcollier on 9/22/16.
  */
 public class Person  {
-    private String iD;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String country;
-    private String ipAddress;
+    String id;
+    String firstName;
+    String lastName;
+    String email;
+    String country;
+    String ipAddress;
 
-    public Person(String iD, String firstName, String lastName, String email, String country, String ipAddress) {
-        this.iD = iD;
+    public Person(String id, String firstName, String lastName, String email, String country, String ipAddress) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -25,12 +25,12 @@ public class Person  {
         this.ipAddress = ipAddress;
     }
 
-    public String getiD() {
-        return iD;
+    public String getId() {
+        return id;
     }
 
-    public void setiD(String iD) {
-        this.iD = iD;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -73,5 +73,8 @@ public class Person  {
         this.ipAddress = ipAddress;
     }
 
-
+    @Override
+    public String toString() {
+        return String.format("%s  %s ", firstName , lastName);
+    }
 }
