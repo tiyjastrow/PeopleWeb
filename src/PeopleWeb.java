@@ -33,15 +33,30 @@ public class PeopleWeb {
                 ((request, response) -> {
                     HashMap m = new HashMap();
                     ArrayList<Person> person20 = new ArrayList();
-                    int startingIndex = 0;
-                    int endIndex = 20;
+                    Integer next = null;
+                    Integer previous = null;
+                    String offset= request.queryParams("offset");
+                    int offsetNum = 0;
 
-                    for (int i = startingIndex; i <endIndex ; i++) {
-                        Person person = peopleList.get(i);
-                        person20.add(person);
+                    if (offset != null){
+                        offsetNum = Integer.parseInt(offset);
+                    }
+
+                    for (int i =  offsetNum; i < (offsetNum + 20); i++) {
+                        person20.add(peopleList.get(i));
+                    }
+
+                    if(offsetNum >= 20){
+                        previous = offsetNum - 20;
+                    }
+
+                    if(offsetNum < peopleList.size() - 20){
+                        next = offsetNum + 20;
                     }
 
                     m.put("names", person20);
+                    m.put("next", next);
+                    m.put("previous", previous);
                     return new ModelAndView(m, "people.html");
                 }),
                 new MustacheTemplateEngine()
