@@ -1,3 +1,10 @@
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
 /**
  * Created by ericcollier on 9/22/16.
  */

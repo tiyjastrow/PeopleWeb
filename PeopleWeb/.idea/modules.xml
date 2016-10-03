@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PeopleWebDb.iml" filepath="$PROJECT_DIR$/PeopleWebDb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PeopleWeb.iml" filepath="$PROJECT_DIR$/PeopleWeb.iml" />
     </modules>
   </component>
 </project>
