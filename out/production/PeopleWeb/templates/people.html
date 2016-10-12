@@ -1,0 +1,28 @@
+<html>
+<body>
+
+<!-- show list of people -->
+
+{{#subList}}
+<a href="/person?id={{id}}">{{.}}</a><br>
+{{/subList}}
+
+{{#individual}}
+First Name: {{firstName}}<br>
+Last Name: {{lastName}}<br>
+Email: {{email}} <br>
+Countryy: {{country}}<br>
+IP Address: {{ipAddr}}
+{{/individual}}
+
+{{#next}}
+<!--? is queryParam-->
+<a href="/?offset={{.}}">next</a>
+{{/next}}
+
+{{#previous}}
+<a href="/?offset={{.}}">previous</a>
+{{/previous}}
+
+</body>
+</html>
