@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+<h2>Individual Person Details:</h2>
+<hr>
+
+{{#person}}
+<h3>Id: {{id}} <br>
+    Name: {{fullName}} <br>
+    Email: {{email}} <br>
+    Country: {{country}} <br>
+    IP Address: {{ipAddress}} <br>
+</h3>
+{{/person}}
+
+
+<a href="#" onclick="history.go(-1)">
+    <button>Back</button>
+</a>
+
+</body>
+</html>
