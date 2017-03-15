@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome to the People Web App!</h1>
+
+{{#subList}}
+<a href="/person?id={{id}}"> {{fullName}} </a> <br>
+{{/subList}}
+<br>
+
+{{#prevOffset}}
+<a href="/?offset={{.}}">
+    <button>Previous</button>
+</a>
+{{/prevOffset}}
+
+{{#nextOffset}}
+<a href="/?offset={{.}}">
+    <button>Next</button>
+</a>
+{{/nextOffset}}
+
+</body>
+</html>
